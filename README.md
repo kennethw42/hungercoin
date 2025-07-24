@@ -46,5 +46,5 @@ All code is licensed under the MIT License to ensure open-source compliance whil
 
 ## Contact
 - **GitHub**: [HungerCoin-FeedHunger](https://github.com/your-username/HungerCoin-FeedHunger)
-- **X**: 
+- **X**: @kennethcook0321
 - **Email**: feedhunger2@gmail.com 
