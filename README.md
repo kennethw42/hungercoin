@@ -46,5 +46,5 @@ All code is licensed under the MIT License to ensure open-source compliance whil
 
 ## Contact
 - **GitHub**: [HungerCoin-FeedHunger](https://github.com/your-username/HungerCoin-FeedHunger)
-- **X**: @YourHandle (replace with your X handle)
-- **Email**: your-email@example.com (replace with your contact email)
+- **X**: 
+- **Email**: feedhunger2@gmail.com 
