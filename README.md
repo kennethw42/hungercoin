@@ -45,6 +45,7 @@ HungerCoin is a USD-pegged utility cryptocurrency on the Solana blockchain, desi
 All code is licensed under the MIT License to ensure open-source compliance while protecting our brand and mission.
 
 ## Contact
-- **GitHub**: [HungerCoin-FeedHunger](https://github.com/your-username/HungerCoin-FeedHunger)
+## Contact
+- **GitHub**: github.com/kennethw42/hungercoin
 - **X**: @kennethcook0321
-- **Email**: feedhunger2@gmail.com 
+- **Email**: feedhunger2@gmail.com
