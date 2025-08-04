@@ -1,0 +1,314 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    /* Light background */
+    color: #333;
+    /* Dark text for readability */
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styling */
+header {
+    background-color: #2e8b57;
+    /* Green header background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow effect */
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+/* Navigation Styling */
+nav {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    background-color: #ffffff;
+    color: #2e8b57;
+    padding: 10px 20px;
+    border: 2px solid #2e8b57;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #2e8b57;
+    color: white;
+    border-color: #f4d03f;
+    /* Yellow border on hover */
+}
+
+/* Hero Section Styling */
+#hero {
+    background-color: #2e8b57;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 4px solid #f4d03f;
+    /* Yellow border for emphasis */
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+#hero strong {
+    font-weight: bold;
+    color: #f4d03f;
+}
+
+#hero .cta-button {
+    background-color: #f4d03f;
+    color: #2e8b57;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+#hero .cta-button:hover {
+    background-color: #f1c40f;
+    /* Slightly darker yellow */
+}
+
+/* Main Content Styling */
+main {
+    flex-grow: 1;
+    /* Ensures the main content fills available space */
+    padding: 40px 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2e8b57;
+}
+
+h3 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #2e8b57;
+}
+
+/* Tab Navigation Styling */
+.tab {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px solid #ccc;
+}
+
+.tab button {
+    background-color: inherit;
+    padding: 14px 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.1em;
+    flex: 1;
+    /* Ensures tabs take equal width */
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #ccc;
+    border-bottom: 2px solid #333;
+}
+
+/* Tab Content Styling */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    background-color: white;
+    border-top: none;
+    border: 1px solid #ccc;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+/* Country and State Box Styling */
+.country-box,
+.state-box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.country-box:hover,
+.state-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Lift and emphasize on hover */
+}
+
+.country-box h4,
+.state-box h4 {
+    font-size: 1.8em;
+    color: #2e8b57;
+    margin-bottom: 10px;
+}
+
+.country-box p,
+.state-box p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.country-box a,
+.state-box a {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #2e8b57;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.country-box a:hover,
+.state-box a:hover {
+    background-color: #f4d03f;
+    /* Yellow on hover */
+}
+
+/* Form Styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    .country-box,
+    .state-box {
+        margin-bottom: 15px;
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .tab {
+        flex-direction: column;
+    }
+
+    .tab button {
+        flex: none;
+        /* Allow the buttons to stack properly */
+        width: 100%;
+    }
+}
