@@ -1,40 +1,54 @@
-/* styles.css - Tailwind utilities for FeedHunger.org */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+}
 
-.min-h-screen { min-height: 100vh; }
-.bg-gray-100 { background-color: #f3f4f6; }
-.bg-blue-600 { background-color: #2563eb; }
-.bg-white { background-color: #ffffff; }
-.bg-blue-500 { background-color: #3b82f6; }
-.bg-green-500 { background-color: #22c55e; }
-.text-white { color: #ffffff; }
-.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
-.text-2xl { font-size: 1.5rem; line-height: 2rem; }
-.font-bold { font-weight: 700; }
-.p-4 { padding: 1rem; }
-.mt-2 { margin-top: 0.5rem; }
-.px-4 { padding-left: 1rem; padding-right: 1rem; }
-.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-.rounded { border-radius: 0.25rem; }
-.hover\:bg-blue-600:hover { background-color: #2563eb; }
-.hover\:bg-green-600:hover { background-color: #16a34a; }
-.max-w-7xl { max-width: 80rem; }
-.mx-auto { margin-left: auto; margin-right: auto; }
-.mb-8 { margin-bottom: 2rem; }
-.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
-.font-semibold { font-weight: 600; }
-.mb-4 { margin-bottom: 1rem; }
-.grid { display: grid; }
-.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-.md\:grid-cols-3 { at media (min-width: 768px) { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-.gap-4 { gap: 1rem; }
-.shadow { box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); }
-.font-medium { font-weight: 500; }
-.text-gray-600 { color: #4b5563; }
-.text-gray-700 { color: #374151; }
-.block { display: block; }
-.w-full { width: 100%; }
-.p-2 { padding: 0.5rem; }
-.border { border-width: 1px; }
-.text-blue-500 { color: #3b82f6; }
-.underline { text-decoration: underline; }
-/* Copyright © 2025 FeedHunger.org ™ */
+header {
+  background-color: #2563eb;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+form {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
