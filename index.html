@@ -2,153 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FeedHunger.org - Farmer Registration</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Style the tab navigation */
-        .tab {
-            overflow: hidden;
-            background-color: #f1f1f1;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FeedHunger.org – Trade nutritional goods globally using HungerCoin" />
+  <title>FeedHunger.org</title>
 
-        /* Style the buttons that are used to open the tab content */
-        .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-        }
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="favicon.ico" />
 
-        /* Change background color of buttons on hover */
-        .tab button:hover {
-            background-color: #ddd;
-        }
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
 
-        /* Create an active/current tablink class */
-        .tab button.active {
-            background-color: #ccc;
-        }
+  <!-- Firebase v8 SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 
-        /* Style the tab content */
-        .tabcontent {
-            display: none;
-            padding: 6px 12px;
-            border: 1px solid #ccc;
-            border-top: none;
-        }
-    </style>
+  <!-- React & ReactDOM -->
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+
+  <!-- Babel for JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Phantom Wallet -->
+  <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@latest/lib/index.iife.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1>FeedHunger.org</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="countries.html">Countries</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="HungerCoin.html">HungerCoin</a></li>
-                <li><a href="farmer_registration.html">Farmer Registration</a></li>
-            </ul>
-        </nav>
-    </header>
+  <div id="root"></div>
 
-    <main>
-        <!-- Tab navigation -->
-        <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
-            <button class="tablinks" onclick="openTab(event, 'About')">About Us</button>
-            <button class="tablinks" onclick="openTab(event, 'Countries')">Countries</button>
-            <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
-            <button class="tablinks" onclick="openTab(event, 'FarmerRegistration')">Farmer Registration</button>
-        </div>
-
-        <!-- Tab content -->
-        <div id="Home" class="tabcontent">
-            <h2>Welcome to FeedHunger.org</h2>
-            <p>Our mission is to eradicate hunger by providing access to nutritious food worldwide, using the power of
-                education, technology, and HungerCoin.</p>
-            <p><strong>Join us in our fight against hunger!</strong></p>
-            <a href="hungercoin.html" class="cta-button">Learn More About HungerCoin</a>
-        </div>
-
-        <div id="About" class="tabcontent">
-            <h2>Our Mission</h2>
-            <p>At FeedHunger.org, we strive to reduce global hunger by providing better agricultural tools, education,
-                and promoting sustainable farming practices. Through the use of HungerCoin, we are working to
-                revolutionize the food industry by taking advantage of trade arbitrage and facilitating donations made
-                in HungerCoin to provide aid where it is needed most. By empowering communities with the tools and
-                resources to feed themselves, we aim to build a future free from hunger.</p>
-        </div>
-
-        <div id="Countries" class="tabcontent">
-            <h2>Countries We Serve</h2>
-            <p>Explore the countries we work with and how we help combat hunger globally.</p>
-        </div>
-
-        <div id="Contact" class="tabcontent">
-            <h2>Contact Us</h2>
-            <p>Have questions? Reach out to us for more information.</p>
-        </div>
-
-        <div id="FarmerRegistration" class="tabcontent">
-            <h2>Farmer Registration</h2>
-            <form action="submit_farmers_data.php" method="post">
-                <label for="farmerName">Farmer's Name:</label>
-                <input type="text" id="farmerName" name="farmerName" required>
-
-                <label for="farmLocation">Farm Location:</label>
-                <input type="text" id="farmLocation" name="farmLocation" required>
-
-                <label for="cropType">Crop Type:</label>
-                <input type="text" id="cropType" name="cropType" required>
-
-                <label for="quantity">Quantity (in tons):</label>
-                <input type="number" id="quantity" name="quantity" required>
-
-                <label for="price">Price per ton (in HungerCoin):</label>
-                <input type="number" id="price" name="price" required>
-
-                <button type="submit">Register</button>
-            </form>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 FeedHunger.org. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Function to open the tab content
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-
-            // Get all elements with class="tabcontent" and hide them
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-
-            // Get all elements with class="tablinks" and remove the class "active"
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-
-            // Show the current tab and add an "active" class to the button that opened the tab
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-
-        // Initialize the first tab as active
-        document.getElementsByClassName("tablinks")[0].click();
-    </script>
+  <!-- React App -->
+  <script type="text/babel" src="app.js"></script>
 </body>
 
 </html>
